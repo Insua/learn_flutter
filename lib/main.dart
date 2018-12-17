@@ -6,21 +6,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Text widget',
+      title: 'flutter',
       home: Scaffold(
-        body: Center(
-          child: Container(
-            child: new Image.network(
-              'https://iocaffcdn.phphub.org/uploads/sites/hG5JuDSqZ7Y26Kuh0Qat8EYv6XNT0fGc.png',
-              scale: 1,
-              fit: BoxFit.contain,
-              colorBlendMode: BlendMode.darken,
-              repeat: ImageRepeat.repeat,
+       appBar: new AppBar(
+         title: new Text('ListView Widget'),
+       ),
+        body: new ListView(
+          children: <Widget>[
+            new ListTile(
+              leading: new Icon(Icons.access_time),
+              title: new Text('access_time'),
             ),
-            width: 300.0,
-            height: 200.0,
-            color: Colors.lightBlue,
-          ),
+            new ListTile(
+              leading: new Icon(Icons.account_balance),
+              title: new Text('account_balance'),
+            )
+          ],
         ),
       ),
     );
