@@ -10,18 +10,16 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: Container(
-            child: new Text('Hello', style: TextStyle(fontSize: 40.0),),
-            alignment: Alignment.topLeft,
-            width: 500.0,
-            height: 400.0,
-            padding: const EdgeInsets.fromLTRB(10.0, 30.0, 0.0, 0.0),
-            margin: const EdgeInsets.all(10.0),
-            decoration: new BoxDecoration(
-              gradient: const LinearGradient(
-                  colors: [Colors.lightBlue,Colors.greenAccent,Colors.purple]
-              ),
-              border: Border.all(width: 2.0,color: Colors.red)
+            child: new Image.network(
+              'https://iocaffcdn.phphub.org/uploads/sites/hG5JuDSqZ7Y26Kuh0Qat8EYv6XNT0fGc.png',
+              scale: 1,
+              fit: BoxFit.contain,
+              colorBlendMode: BlendMode.darken,
+              repeat: ImageRepeat.repeat,
             ),
+            width: 300.0,
+            height: 200.0,
+            color: Colors.lightBlue,
           ),
         ),
       ),
