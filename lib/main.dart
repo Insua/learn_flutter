@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
-void main () => runApp(MyApp(
-    items: new List<String>.generate(1000, (i)=> "Item $i")
-));
+void main () => runApp(MyApp());
 class MyApp extends StatelessWidget{
-  final List<String> items;
-  MyApp({Key key, @required this.items}):super(key:key);
   @override
-  Widget build(BuildContext context ){
+  Widget build(BuildContext context) {
     return MaterialApp(
-      title:'ListView widget',
-      home:Scaffold(
-          body:new ListView.builder(
-              itemCount:items.length,
-              itemBuilder:(context,index){
-                return new ListTile(
-                  title:new Text('${items[index]}'),
-                );
-              }
-          )
+      title: 'ListView widget',
+      home: Scaffold(
+        body: GridView.count(
+          padding: const EdgeInsets.all(20.0),
+          crossAxisSpacing: 10.0,
+          crossAxisCount: 3,
+          children: <Widget>[
+            const Text('怒发冲冠'),
+            const Text('凭栏处'),
+            const Text('潇潇雨歇'),
+            const Text('抬望眼'),
+            const Text('仰天长啸'),
+            const Text('壮怀激烈')
+          ],
+        ),
       ),
     );
   }
