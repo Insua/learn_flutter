@@ -12,24 +12,24 @@ class MyApp extends StatelessWidget{
         ),
         body: new Row(
           children: <Widget>[
-            Expanded(child:new RaisedButton(onPressed: (){
+            new RaisedButton(onPressed: (){
               
             },
               color: Colors.redAccent,
               child: new Text('红色按钮'),
-            )),
+            ),
             Expanded(child:new RaisedButton(onPressed: () {
               
             },
               color: Colors.orangeAccent,
               child: new Text('黄色按钮'),
             )),
-            Expanded(child:new RaisedButton(onPressed: (){
+            new RaisedButton(onPressed: (){
               
             },
               color: Colors.pinkAccent,
               child: new Text('粉色按钮'),
-            ))
+            )
           ],
         ),
       ),
