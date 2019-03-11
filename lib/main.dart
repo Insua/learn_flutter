@@ -10,12 +10,15 @@ class MyApp extends StatelessWidget{
           backgroundImage: new NetworkImage('https://iocaffcdn.phphub.org//uploads/communities/WtC3cPLHzMbKRSZnagU9.png'),
           radius: 100.0,
         ),
-        new Container(
-          decoration: new BoxDecoration(
-            color: Colors.lightBlue
-          ),
-          padding: EdgeInsets.all(5.0),
-          child: new Text('苟日新'),
+        new Positioned(
+            top: 10.0,
+            left: 10.0,
+            child: new Text('苟日新')
+        ),
+        new Positioned(
+            bottom: 10.0,
+            right: 10.0,
+            child: new Text('日日新')
         )
       ],
     );
@@ -25,7 +28,7 @@ class MyApp extends StatelessWidget{
 
       home: Scaffold(
         appBar: new AppBar(
-          title: new Text('垂直方向布局'),
+          title: new Text('层叠布局'),
         ),
         body: Center(child: stack),
       ),
